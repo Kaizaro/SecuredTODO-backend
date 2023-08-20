@@ -16,11 +16,12 @@ todos.get(paths.GET_TODOS, async (request, response, next) => {
 
 todos.post(paths.POST_TODO, async (request, response, next) => {
   console.log(request);
-  const result = await postTODOAtDb(request);
+  console.log(request.body);
+  const result = await postTODOAtDb(request.body.todoItem);
   if (result) {
     response.send({status: 'OK', code: 200, data: {value: 'successfully loaded items'}});
   } else {
-    response.send({status: 'Error', code: 400, data: {value: 'Error occured'}});
+    response.send({status: 'Error', code: 400, data: {value: 'Error occurred'}});
   }
 })
 
