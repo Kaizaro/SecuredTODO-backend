@@ -8,4 +8,4 @@ const getTODOFromDB = async (data) => {
   }
 }
 
-module.exports = postTODOAtDB;
+module.exports = getTODOFromDB;

@@ -1,3 +1,5 @@
+const mongoose = require("mongoose");
+
 const TODOSchema = new mongoose.Schema({
   text: String,
   updatedAt: String,
