@@ -15,7 +15,7 @@ todos.get(paths.GET_TODOS, async (request, response, next) => {
   }
 })
 
-todos.post(paths.POST_TODO, async (request, response, next) => {
+todos.post(paths.POST_TODO, async (request, response) => {
   console.log('@POST_TODO_REQ => ', request.body);
   const result = await postTODOAtDb(request.body.todoItem);
   if (result) {
@@ -25,7 +25,8 @@ todos.post(paths.POST_TODO, async (request, response, next) => {
   }
 })
 
-todos.delete(paths.DELETE_TODO, async (request, response, next) => {
+todos.delete(paths.DELETE_TODO, async (request, response) => {
+  console.log('@POST_TODO_REQ => ', request);
   console.log('@POST_TODO_REQ => ', request.body);
   const result = await deleteTODOFromDb(request.body.todoItemUuid);
   if (result) {
