@@ -5,15 +5,18 @@
   "scripts": {
     "build": "npx tsc",
     "start": "node ./bin/www.ts",
+    "start_db": "node ./db/config",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q ./bin/www.ts\""
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
+    "dayjs": "^1.11.9",
     "debug": "~2.6.9",
     "dotenv": "^16.3.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "mongoose": "^7.4.3",
     "morgan": "~1.9.1"
   },
   "devDependencies": {
